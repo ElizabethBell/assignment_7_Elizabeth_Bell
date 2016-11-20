@@ -14,8 +14,6 @@ int main(int argc, char ** argv){
   
   printf("I am rank %i in node %s.\n", id, host);
   
-  printf();
-  
   MPI_Finalize();
   return 0;
 }
