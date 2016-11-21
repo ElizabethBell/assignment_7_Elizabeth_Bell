@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#PBS -l nodes=2:ppn16
+#PBS -l nodes=2:ppn=16
 
 cd $PBS_O_WORKDIR
 
 echo "32 processes, 2 nodes"
 mpirun -n 32 ./prelim
 
-#PBS -l nodes=4:ppn4
+#PBS -l nodes=4:ppn=4
 
 cd $PBS_O_WORKDIR
 
