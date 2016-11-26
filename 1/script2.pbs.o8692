@@ -1,0 +1,9 @@
+32 processes, 4 nodes
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 32 slots 
+that were requested by the application:
+  ./prelim
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
