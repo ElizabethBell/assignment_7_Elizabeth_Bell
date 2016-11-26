@@ -62,9 +62,9 @@ int main(int argc, char *argv[]) {
       MPI_Send(&sol, 1, MPI_DOUBLE, dest, tag, MPI_COMM_WORLD);
     }
     
-    MPI_Finalize();
     gettimeofday(&end, NULL);
     printf("Time: %ld\n", ((end.tv_sec * 1000000 + end.tv_usec)-(start.tv_sec * 1000000 + start.tv_usec)));
+    MPI_Finalize();
   }
   
   
