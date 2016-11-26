@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
       }
     }
     else {
-      MPI_Send(&sol, 1, MPI_DOUBLE, dest, tag, MPI_COMM_WORLD, &status);
+      MPI_Send(&sol, 1, MPI_DOUBLE, dest, tag, MPI_COMM_WORLD);
     }
     
     MPI_Finalize();
