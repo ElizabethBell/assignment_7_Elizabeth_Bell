@@ -1,0 +1,20 @@
+0, 10^3, 10^3, 10, 4 processes
+Time: 27068
+Time: 23723
+Time: 19983
+Time: 34830
+0, 10^3, 10^3, 1000, 4 processes
+Time: 29021
+Time: 21288
+Time: 32152
+Time: 30569
+0, 10^3, 10^9, 10, 4 processes
+Time: 21100027
+Time: 21096517
+Time: 21089145
+Time: 21098788
+0, 10^3, 10^9, 1000, 4 processes
+Time: 2110249077
+Time: 2110245730
+Time: 2110252663
+Time: 2110248312

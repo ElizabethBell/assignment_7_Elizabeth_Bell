@@ -1,0 +1,12 @@
+0, 10^3, 10^3, 10, 2 processes
+Time: 13762
+Time: 18062
+0, 10^3, 10^3, 1000, 2 processes
+Time: 14771
+Time: 19299
+0, 10^3, 10^9, 10, 2 processes
+Time: 19620104
+Time: 19870591
+0, 10^3, 10^9, 1000, 2 processes
+Time: 2116048217
+Time: 2118049282
