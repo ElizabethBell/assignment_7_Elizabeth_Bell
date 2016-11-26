@@ -15,11 +15,11 @@ double f (double n, int x) {
   return y;
 }
 
-double integrate (int a, int b, int n, int x) {
+double integrate (int a, int b, int n, int x, int num) {
   int i;
   double sol;
   
-  for (i=0; i<n; i++) {
+  for (i=0; i<num; i++) {
     double num = a+(i+0.5)*((b-a)/n);
     sol += f(num, x)*((b-a)/n);
   }
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
     printf("Incorrect number of arguments.\n");
   }
   else {
-    int low, high, points, inten, dest, id, rank, p, source, tag, i;
+    int low, high, points, inten, dest, id, rank, p, source, tag, i, num;
     double sol, result;
     dest = 0;
     low = atoi(argv[1]);
@@ -49,7 +49,9 @@ int main(int argc, char *argv[]) {
     MPI_Comm_rank(MPI_COMM_WORLD, &id);
     MPI_Comm_size(MPI_COMM_WORLD, &p);
     
-    sol = integrate(low, high, points, inten);
+    num = points/p;
+    
+    sol = integrate(low, high, points, inten, num);
     
     if(id = 0){
       result = sol;
