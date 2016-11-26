@@ -4,4 +4,6 @@ To compile without errors, you will need to use:
 
 mpicc -o prelim prelim.c
 
-Output from script.pbs on Mamba:
+The script.pbs file makes use of 2 nodes with 16 processes each, while the script2.pbs file makes use of 4 nodes with 4 processes each.
+
+Output from script files on Mamba:
