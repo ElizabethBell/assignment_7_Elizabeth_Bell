@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -l procs=4
+#PBS -l nodes=8:ppn=4
 
 cd $PBS_O_WORKDIR
 
