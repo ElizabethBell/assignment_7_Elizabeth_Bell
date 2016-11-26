@@ -63,9 +63,10 @@ int main(int argc, char *argv[]) {
     }
     
     MPI_Finalize();
+    gettimeofday(&end, NULL);
+    printf("Time: %ld\n", ((end.tv_sec * 1000000 + end.tv_usec)-(start.tv_sec * 1000000 + start.tv_usec)));
   }
-  gettimeofday(&end, NULL);
-  printf("Time: %ld\n", ((end.tv_sec * 1000000 + end.tv_usec)-(start.tv_sec * 1000000 + start.tv_usec)));
+  
   
   return 0;
 }
