@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -1 procs=4
+#PBS -l procs=4
 
 cd $PBS_O_WORKDIR
 
