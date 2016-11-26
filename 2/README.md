@@ -10,11 +10,11 @@ Each script file is named with the number of processes it will use (srcipt1.pbs,
 Output from script files on Mamba:
 
 0, 10^3, 10^3, 10, 1 process
-Time: 63250
+Time: 17722
 0, 10^3, 10^3, 1000, 1 process
-Time: 15856
+Time: 14710
 0, 10^3, 10^9, 10, 1 process
-Time: 19181184
+Time: 19202414
 0, 10^3, 10^9, 1000, 1 process
-Time: 1966661491
+Time: 2116505064
 
