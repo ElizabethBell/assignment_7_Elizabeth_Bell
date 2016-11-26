@@ -27,7 +27,7 @@ double integrate (int a, int b, int n, int x) {
 }
 
 int main(int argc, char *argv[]) {
-  if(argc != 5) {
+  if(argc != 6) {
     printf("Incorrect number of arguments.\n");
   }
   else {
@@ -38,6 +38,7 @@ int main(int argc, char *argv[]) {
     high = atoi(argv[2]);
     points = atoi(argv[3]);
     inten = atoi(argv[4]);
+    p = atoi(argv[5]);
     tag = 67;
     MPI_Status status;
     struct timeval start, end;

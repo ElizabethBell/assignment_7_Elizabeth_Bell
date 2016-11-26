@@ -5,15 +5,15 @@
 cd $PBS_O_WORKDIR
 
 echo "0, 10^3, 10^3, 10, 1 process"
-mpirun -n 1 ./stat 0 1000 1000 10
+mpirun -n 1 ./stat 0 1000 1000 10 1
 
 echo "0, 10^3, 10^3, 1000, 1 process"
-mpirun -n 1 ./stat 0 1000 1000 1000
+mpirun -n 1 ./stat 0 1000 1000 1000 1
 
 echo "0, 10^3, 10^9, 10, 1 process"
-mpirun -n 1 ./stat 0 1000 1000000000 10
+mpirun -n 1 ./stat 0 1000 1000000000 10 1
 
 echo "0, 10^3, 10^9, 1000, 1 process"
-mpirun -n 1 ./stat 0 1000 1000000000 1000
+mpirun -n 1 ./stat 0 1000 1000000000 1000 1
 
 exec 1>$PBS_O_WORKDIR/out  2>$PBS_O_WORKDIR/err
