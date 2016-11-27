@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#PBS -l procs=2
+
+cd $PBS_O_WORKDIR
+
+echo "0, 10^3, 10^3, 10, 2 processes"
+mpirun -n 2 ./master 0 1000 1000 10
+
+echo "0, 10^3, 10^3, 1000, 2 processes"
+mpirun -n 2 ./master 0 1000 1000 1000
+
+echo "0, 10^3, 10^9, 10, 2 processes"
+mpirun -n 2 ./master 0 1000 1000000000 10
+
+echo "0, 10^3, 10^9, 1000, 2 processes"
+mpirun -n 2 ./master 0 1000 1000000000 1000
