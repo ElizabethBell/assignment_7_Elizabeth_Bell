@@ -66,6 +66,7 @@ int main(int argc, char *argv[]) {
           }
           if(data>=0){
             tf=0;
+            i=p;
           }
         }
       }
