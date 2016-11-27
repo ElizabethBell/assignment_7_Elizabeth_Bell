@@ -60,13 +60,13 @@ int main(int argc, char *argv[]) {
         MPI_Recv(&sol, 1, MPI_DOUBLE, source, tag, MPI_COMM_WORLD, &status);
         result += sol;
       }
+      gettimeofday(&end, NULL);
+      printf("Time: %ld\n", ((end.tv_sec * 1000000 + end.tv_usec)-(start.tv_sec * 1000000 + start.tv_usec)));
     }
     else {
       MPI_Send(&sol, 1, MPI_DOUBLE, dest, tag, MPI_COMM_WORLD);
     }
     MPI_Finalize();
-    gettimeofday(&end, NULL);
-    printf("Time: %ld\n", ((end.tv_sec * 1000000 + end.tv_usec)-(start.tv_sec * 1000000 + start.tv_usec)));
   }
   
   

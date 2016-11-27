@@ -6,5 +6,3 @@ cd $PBS_O_WORKDIR
 
 echo "32 processes, 4 nodes"
 mpirun -n 32 ./prelim
-
-exec 1>$PBS_O_WORKDIR/out  2>$PBS_O_WORKDIR/err

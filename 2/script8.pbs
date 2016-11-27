@@ -15,5 +15,3 @@ mpirun -n 8 ./stat 0 1000 1000000000 10 8
 
 echo "0, 10^3, 10^9, 1000, 8 processes"
 mpirun -n 8 ./stat 0 1000 1000000000 1000 8
-
-exec 1>$PBS_O_WORKDIR/out  2>$PBS_O_WORKDIR/err
