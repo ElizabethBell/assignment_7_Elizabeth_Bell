@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
     
     printf("process %d\n", id);
     
-    if(id = 0){
+    if(id == 0){
       result = sol;
       for(i=1; i<p; i++){
         source = i;
