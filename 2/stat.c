@@ -42,6 +42,8 @@ int main(int argc, char *argv[]) {
     MPI_Status status;
     struct timeval start, end;
     
+    gettimeofday(&start, NULL);
+    
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &id);
     MPI_Comm_size(MPI_COMM_WORLD, &p);
@@ -53,7 +55,6 @@ int main(int argc, char *argv[]) {
     printf("process %d\n", id);
     
     if(id = 0){
-     gettimeofday(&start, NULL);
       result = sol;
       for(i=1; i<p; i++){
         source = i;
