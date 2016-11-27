@@ -57,6 +57,7 @@ int main(int argc, char *argv[]) {
       result = sol;
       for(i=1; i<p; i++){
         source = i;
+        printf("source %i\n", source);
         MPI_Recv(&sol, 1, MPI_DOUBLE, source, tag, MPI_COMM_WORLD, &status);
         result += sol;
         printf("result %d\n", result);
