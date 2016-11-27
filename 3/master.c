@@ -64,7 +64,7 @@ int main(int argc, char *argv[]) {
             result += sol;
             data -= num;
           }
-          if(data>=0){
+          if(data<=0){
             tf=0;
             i=p;
           }
