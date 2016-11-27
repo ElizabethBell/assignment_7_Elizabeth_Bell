@@ -1,0 +1,12 @@
+0, 10^3, 10^3, 10, 2 processes
+process 0
+process 1
+0, 10^3, 10^3, 1000, 2 processes
+process 0
+process 1
+0, 10^3, 10^9, 10, 2 processes
+process 0
+process 1
+0, 10^3, 10^9, 1000, 2 processes
+process 1
+process 0
