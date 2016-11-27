@@ -52,16 +52,12 @@ int main(int argc, char *argv[]) {
     
     sol = integrate(low, high, points, inten, num);
     
-    printf("process %d\n", id);
-    
     if(id == 0){
       result = sol;
       for(i=1; i<p; i++){
         source = i;
-        printf("source %i\n", source);
         MPI_Recv(&sol, 1, MPI_DOUBLE, source, tag, MPI_COMM_WORLD, &status);
         result += sol;
-        printf("result %d\n", result);
       }
       gettimeofday(&end, NULL);
       printf("Time: %ld\n", ((end.tv_sec * 1000000 + end.tv_usec)-(start.tv_sec * 1000000 + start.tv_usec)));
