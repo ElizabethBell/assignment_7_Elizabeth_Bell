@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
       while(tf==1){
         for(i=1; i<p; i++){
           source = i;
-          MPI_Send(&tf, 1, MPI_DOUBLE, source, tag, MPI_COMM_WORLD);
+          MPI_Send(&tf, 1, MPI_INT, source, tag, MPI_COMM_WORLD);
           
           if(tf==1){
             MPI_Recv(&sol, 1, MPI_DOUBLE, source, tag, MPI_COMM_WORLD, &status);
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
         }
       }
       for(i=1; i<p; i++){
-        MPI_Send(&tf, 1, MPI_DOUBLE, source, tag, MPI_COMM_WORLD);
+        MPI_Send(&tf, 1, MPI_INT, source, tag, MPI_COMM_WORLD);
       }
       
       gettimeofday(&end, NULL);
@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
     }
     else {
       
-      MPI_Recv(&tf, 1, MPI_DOUBLE, dest, tag, MPI_COMM_WORLD, &status);
+      MPI_Recv(&tf, 1, MPI_INT, dest, tag, MPI_COMM_WORLD, &status);
       
       if(tf==1){
         sol = integrate(low, high, points, inten, num);
