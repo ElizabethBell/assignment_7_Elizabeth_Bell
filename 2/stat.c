@@ -42,8 +42,6 @@ int main(int argc, char *argv[]) {
     MPI_Status status;
     struct timeval start, end;
     
-    gettimeofday(&start, NULL);
-    
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &id);
     MPI_Comm_size(MPI_COMM_WORLD, &p);
@@ -53,19 +51,20 @@ int main(int argc, char *argv[]) {
     sol = integrate(low, high, points, inten, num);
     
     if(id = 0){
+     gettimeofday(&start, NULL);
       result = sol;
       for(i=1; i<p; i++){
         source = i;
         MPI_Recv(&sol, 1, MPI_DOUBLE, source, tag, MPI_COMM_WORLD, &status);
         result += sol;
       }
-      gettimeofday(&end, NULL);
-      printf("Time: %ld\n", ((end.tv_sec * 1000000 + end.tv_usec)-(start.tv_sec * 1000000 + start.tv_usec)));
     }
     else {
       MPI_Send(&sol, 1, MPI_DOUBLE, dest, tag, MPI_COMM_WORLD);
     }
     MPI_Finalize();
+    gettimeofday(&end, NULL);
+    printf("Time: %ld\n", ((end.tv_sec * 1000000 + end.tv_usec)-(start.tv_sec * 1000000 + start.tv_usec)));
   }
   
   
