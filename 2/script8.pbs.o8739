@@ -1,0 +1,8 @@
+0, 10^3, 10^3, 10, 8 processes
+Time: 39634
+0, 10^3, 10^3, 1000, 8 processes
+Time: 35084
+0, 10^3, 10^9, 10, 8 processes
+Time: 2572925
+0, 10^3, 10^9, 1000, 8 processes
+Time: 261081235
