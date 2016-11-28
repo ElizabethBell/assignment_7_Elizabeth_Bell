@@ -44,13 +44,14 @@ int main(int argc, char *argv[]) {
     struct timeval start, end;
     
     data = points;
-    num = points/p;
     
     gettimeofday(&start, NULL);
     
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &id);
     MPI_Comm_size(MPI_COMM_WORLD, &p);
+    
+    num = points/p;
     
     if(id == 0){
       result = sol;
